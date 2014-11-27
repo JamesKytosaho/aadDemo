@@ -1,0 +1,49 @@
+extends layout
+block content
+
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed"
+                data-toggle="collapse"
+                data-target=".navbar-collapse">
+
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#/Home">ADAL JS Sample</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li ng-class="{ active: isActive('/Home') }"><a href="#/Home">Home</a></li>
+                <li ng-class="{ active: isActive('/TodoList') }"><a href="#/TodoList">Todo List</a></li>
+                <li ng-class="{ active: isActive('/UserData') }"><a href="#/UserData" ng-show="userInfo.isAuthenticated">User</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><button class="btn btn-link" ng-show="userInfo.isAuthenticated" ng-click="Logout()">Logout</button></li>
+                <li><button class="btn btn-link" ng-hide=" userInfo.isAuthenticated" ng-click="Login()">Login</button></li>
+            </ul>
+        </div>
+    </div>
+    </div>
+
+
+    <br />
+    <div class="container" role="main">
+        <div class="row">
+            <div class="col-xs-10 col-xs-offset-1" style="background-color:azure">
+                <div class="page-header">
+                    <h1>Todo List</h1>
+                </div>
+                <p>This sample demonstrates how to take advantage of ADAL JS for adding Azure AD authentication to your AngularJS apps. test</p>
+            <iframe style="width: 800; height: 400; " src="http://localhost:3000/play/live/6559faa5cbee47149bbb751afd3cbd13/ccdd386908a94523afde69fab648f07c"></iframe>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-10 col-xs-offset-1">
+                <div ng-view class="panel-body">
+
+                </div>
+            </div>
+        </div>
