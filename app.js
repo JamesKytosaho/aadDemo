@@ -55,6 +55,7 @@ app.get('/', ensureAuthenticated, function(req, res){
     res.render('index', { user:req.user });
 });
 */
+
 app.get('/login', passport.authenticate('wsfed-saml2', { failureRedirect: '/', failureFlash: true }), function(req, res) {
     res.redirect('/');
 });
