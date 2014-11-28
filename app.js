@@ -24,7 +24,8 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // view engine setup
-app.set('port', process.env.PORT || 3001);
+var port = process.env.PORT || 3001;
+//app.set('port', process.env.PORT || 3001);
 app.set('views', path.join(__dirname, 'views'));
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
@@ -178,9 +179,14 @@ function findByEmail(email, fn) {
     return fn(null, null);
 }
 
-module.exports = app;
 
 
+app.listen(port);
+console.log('listening on port ' + port);
+
+
+/*
 http.createServer(app).listen(app.get('port'), function(){
     console.log('Express server listening on port ' + app.get('port'));
 });
+*/
