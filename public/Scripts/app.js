@@ -1,9 +1,11 @@
-
-
 'use strict';
-var app = angular.module('TodoSPA', ['ngRoute','AdalAngular']);
+
+angular.module('TodoSPA', ['ngRoute','AdalAngular', 'TodoSPA.Home', 'TodoSPA.Index', 'TodoSPA.User']);
+
+//var app = angular.module('TodoSPA', ['ngRoute','AdalAngular']);
+
 // version 1
-app.config(['$routeProvider', '$httpProvider', 'adalAuthenticationServiceProvider', function ($routeProvider, $httpProvider, adalAuthenticationServiceProvider) {
+angular.module('TodoSPA').config(['$routeProvider', '$httpProvider', 'adalAuthenticationServiceProvider', function ($routeProvider, $httpProvider, adalAuthenticationServiceProvider) {
 
     $routeProvider.when("/Home", {
         controller: "HomeController",
