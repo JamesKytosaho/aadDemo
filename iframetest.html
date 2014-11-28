@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+The first video
+
+<div id="player_live_ccdd386908a94523afde69fab648f07c"></div>
+
+<script>
+    if (typeof playerScriptIsInitialized === 'undefined')
+        document.write(unescape('%3Cscript src="http://testplayerloader.azurewebsites.net/scripts/player.js"%3E%3C/script%3E'));
+</script>
+<script>
+    placePlayerFrame('player_live_ccdd386908a94523afde69fab648f07c', 'https://testplayerloaderaad.azurewebsites.net/play/live/6559faa5cbee47149bbb751afd3cbd13/ccdd386908a94523afde69fab648f07c');
+</script>
+
+The second video
+
+<div id="player_vod_4642f8cf2656411a8751636038abc027"></div>
+<script>
+    if (typeof playerScriptIsInitialized === 'undefined')
+        document.write(unescape('%3Cscript src="http://testplayerloader.azurewebsites.net/scripts/player.js"%3E%3C/script%3E'));
+</script>
+<script>
+    placePlayerFrame('player_vod_4642f8cf2656411a8751636038abc027', 'https://testplayerloaderaad.azurewebsites.net/play/vod/6559faa5cbee47149bbb751afd3cbd13/4642f8cf2656411a8751636038abc027');
+</script>
+
+</body>
+</html>
