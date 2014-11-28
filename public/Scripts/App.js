@@ -1,4 +1,4 @@
-﻿'use strict';
+'use strict';
 var app = angular.module('TodoSPA', ['ngRoute','AdalAngular']);
 // version 1
 app.config(['$routeProvider', '$httpProvider', 'adalAuthenticationServiceProvider', function ($routeProvider, $httpProvider, adalAuthenticationServiceProvider) {
@@ -22,8 +22,8 @@ app.config(['$routeProvider', '$httpProvider', 'adalAuthenticationServiceProvide
             extraQueryParameter: ''
         },
         $httpProvider   // pass http provider to inject request interceptor to attach tokens
-        );
-   //5f388bf9-fc7f-4854-906c-d0819c9f951e
+    );
+    //5f388bf9-fc7f-4854-906c-d0819c9f951e
     //client tenantId
     //17c3954e-89ae-4242-9560-3a370147ba9e
 
