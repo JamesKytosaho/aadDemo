@@ -21,7 +21,7 @@ angular.module('TodoSPA').config(['$routeProvider', '$httpProvider', 'adalAuthen
 
     adalAuthenticationServiceProvider.init(
         {
-            tenant: 'common',
+            tenant: '5f388bf9-fc7f-4854-906c-d0819c9f951e',
             clientId: 'a3e5d068-a35a-4596-a33f-8fdd95c7d641',
             extraQueryParameter: ''
         },
